@@ -1,0 +1,400 @@
+/* ****Custom Properties**** */
+:root {
+    --first-color: #05C7F2;
+    --first-alpha-color: #05C7F2;
+    --second-color: #05C7F2;
+    --second-alpha-color: #05C7F2;
+    --three-color: #05C7F2;
+    --three-alpha-color: #05C7F2;
+
+    --link-color: #05C7F2;
+
+    --bg-color: #05C7F2;
+    --bg-alpha-color: #05C7F2;
+}
+
+/* ****Reset Styles**** */
+body {
+    font-family: "arial", Arial, Helvetica, sans-serif;
+}
+
+a {
+    color: var(--link-color);
+    transition: all .3s ease-out;
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--first-color);
+}
+
+/* ****Bostrap Styles**** */
+/* .bg-dark {
+    background-color: var(--second-color) !important;
+} */
+
+.carousel-caption {
+    z-index: 1;
+}
+
+.dropdown-item {
+    color: var(--first-alpha-color);
+    font-weight: bold;
+    transition: all .3s ease-out;
+}
+
+.dropdown-item:hover {
+    color: var(--three-alpha-color);
+    font-weight: bold;
+}
+
+.navbar-brand img {
+    width: auto;
+    height: 5rem;
+}
+
+/* stroke='rgba%28217, 0, 98, 0.55%29'*/
+.navbar-dark .navbar-toggler {
+    --bs-navbar-toggler-icon-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+    transition: all .3s ease-out;
+}
+
+
+/* color fill='%23fff' */
+.carousel-control-prev-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23f00'%3e%3cpath d='M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z'/%3e%3c/svg%3e");
+}
+
+/* color fill='%23fff' */
+.carousel-control-next-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23f00'%3e%3cpath d='M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+}
+
+.nav-item {
+    transition: all .3s ease-out;
+}
+
+.nav-item:hover {
+    background-color: var(--first-alpha-color) !important;
+}
+
+.nav-link {
+    margin-left: 0.5rem;
+    color: var(--first-alpha-color);
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.nav-link:hover {
+    color: var(--bs-white);
+}
+
+
+/* ****My Styles**** */
+.bg-color {
+    color: var(--three-color);
+}
+
+.bg-alpha-color {
+    background-color: var(--bg-alpha-color);
+}
+
+.bg-second-alpha-color {
+    background-color: var(--second-alpha-color);
+}
+
+.bg-gradient-blue-green {
+    background-color: rgb(83, 184, 152, 1);
+    background-image: linear-gradient(135deg,
+            rgb(47, 145, 224, 0.90),
+            rgb(7, 31, 52, 0.97)79%);
+    background-image: linear-gradient(135deg,
+            rgba(5, 73, 129, 0.9),
+            rgba(73, 255, 89, 0.97)79%);
+}
+
+.bg-third-color {
+    background-color: var(--three-color);
+}
+
+.text-third {
+    color: var(--three-color);
+}
+
+.text-first-color {
+    color: var(--first-color);
+}
+
+/* creando una imgane en variable en la seccion sitios multi page y single ponemos con style*/
+.bg-hero-img {
+    background-image: var(--bg-image);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.header-sticky {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: #000;
+    /* Ajusta según tu necesidad */
+}
+
+
+/* Definimos la animación de zoom */
+@keyframes zoomEffect {
+    from {
+        transform: scale(1);
+    }
+
+    to {
+        transform: scale(1.05);
+    }
+}
+
+/* Aplicamos la animación al banner activo */
+#banner1:checked~.slider #top-banner-1,
+#banner2:checked~.slider #top-banner-2,
+#banner3:checked~.slider #top-banner-3,
+#banner4:checked~.slider #top-banner-4 {
+    animation: zoomEffect 1s ease forwards;
+}
+
+/* Opcional: Agregar animaciones de entrada y salida desde diferentes direcciones */
+@keyframes zoomInLeft {
+    from {
+        transform: scale(2.5) translateX(-10%);
+    }
+
+    to {
+        transform: scale(1.05) translateX(0);
+    }
+}
+
+@keyframes zoomInRight {
+    from {
+        transform: scale(2) translateX(10%);
+    }
+
+    to {
+        transform: scale(1.05) translateX(0);
+    }
+}
+
+/* Asignamos diferentes animaciones a cada banner para efectos variados */
+#banner1:checked~.slider #top-banner-1 {
+    animation: zoomInLeft 1s ease forwards;
+}
+
+#banner2:checked~.slider #top-banner-2 {
+    animation: zoomEffect 1s ease forwards;
+}
+
+#banner3:checked~.slider #top-banner-3 {
+    animation: zoomInRight 1s ease forwards;
+}
+
+#banner4:checked~.slider #top-banner-4 {
+    animation: zoomEffect 1s ease forwards;
+}
+
+
+
+/* // ///////////////VIDEO////////////////// */
+
+.video-responsive {
+    position: relative;
+    padding-bottom: 56.25%;
+    /* Relación de aspecto 16:9 */
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+    background: #000;
+    border-radius: 8px;
+    /* Opcional */
+}
+
+.video-responsive video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.left-video video {
+    width: 100%;
+    /* El video ocupa el 100% del ancho del contenedor */
+    height: auto;
+    /* Mantiene la relación de aspecto original del video */
+    border-radius: 8px;
+    /* Bordes redondeados opcionales */
+}
+
+/* Estilo básico para la imagen */
+.zoom-auto {
+    animation: zoomInOut 5s ease-in-out infinite;
+    /* Aplica la animación de zoom */
+    border-radius: 8px;
+    /* Bordes redondeados */
+    overflow: hidden;
+    /* Evita que se vea el contenido fuera de los bordes */
+}
+
+/* Animación de zoom */
+@keyframes zoomInOut {
+    0% {
+        transform: scale(1);
+        /* Tamaño original */
+    }
+
+    50% {
+        transform: scale(1.1);
+        /* Zoom al 10% */
+    }
+
+    100% {
+        transform: scale(1);
+        /* Regresa al tamaño original */
+    }
+}
+
+/* //////////////FONDO///////////// */
+
+/* Fondo y sombra elegante para el contenedor de la visión y misión */
+.vision-mission-container {
+    background: linear-gradient(135deg, rgba(23, 209, 255, 0.986), rgba(0, 0, 0, 0.2));
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+    opacity: 0;  /* Inicia invisible */
+    animation: fadeInUp 1s ease-in-out forwards, shadowMovement 6s infinite, zoomInOut 6s infinite;  /* Animaciones múltiples */
+}
+
+/* Efecto de sombra móvil */
+@keyframes shadowMovement {
+    0% {
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    }
+    50% {
+        box-shadow: 20px 20px 40px rgba(0, 0, 0, 0.2);
+    }
+    100% {
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    }
+}
+
+/* Efecto de zoom mínimo continuo */
+@keyframes zoomInOut {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Animación de desvanecimiento y desplazamiento desde abajo */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Animación de texto */
+.animated-title {
+    opacity: 0;  /* Comienza invisible */
+    animation: fadeIn 1s ease-out forwards;
+}
+
+.animated-text {
+    opacity: 0;  /* Comienza invisible */
+    animation: fadeIn 1.5s ease-out forwards;
+    animation-delay: 0.5s;  /* Retraso para los párrafos */
+}
+
+/* Animación de desvanecimiento */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Efecto de cambio de color en los encabezados */
+.vision-mission-container h2 {
+    position: relative;
+    display: inline-block;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.vision-mission-container h2::after {
+    content: '';
+    position: absolute;
+    width: 50%;
+    height: 3px;
+    background: #000000;
+    bottom: 0;
+    left: 25%;
+    transition: width 0.3s ease, left 0.3s ease;
+}
+
+.vision-mission-container h2:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+/* Estilos para los párrafos */
+.vision-mission-container p {
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.8;
+    margin-bottom: 30px;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Estilos para mejorar la lectura en dispositivos móviles */
+@media (max-width: 767px) {
+    .vision-mission-container {
+        padding: 40px;
+    }
+
+    .vision-mission-container h2 {
+        padding: 40px;
+    }
+
+    .vision-mission-container p {
+        font-size: 1rem;
+    }
+}
+
+
+
+
+
+@media (min-width: 576px) {}
+
+@media (min-width: 768px) {}
+
+@media (min-width: 992px) {
+    .nav-item:hover {
+        background-color: transparent !important;
+    }
+}
+
+@media (min-width: 1200px) {}
+
+@media (min-width: 1400px) {}

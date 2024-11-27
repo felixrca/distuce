@@ -1,0 +1,92 @@
+:root {
+    --image-1: url(../images/distuce/0010.jpg);
+    --image-2: url(../images/distuce/0011.jpg);
+    --image-3: url(../images/distuce/0012.jpg);
+    --image-4: url(../images/distuce/0013.jpg);
+    --image-5: url(../images/distuce/0014.jpg);
+    --image-6: url(../images/distuce/0015.jpg);
+  }
+  
+  
+  .column1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+  
+  .item111 {
+    width: 100%;
+    border-radius: 0.5rem;
+    background-position: center center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover; /* Ajuste para ocupar el contenedor completo */
+    animation: background 5s infinite ease-in-out;
+  }
+  
+  .item-11 {
+    height: 4rem;
+    animation-duration: 2.5s;
+  }
+  
+  .item-22 {
+    height: 6rem;
+    animation-duration: 3s;
+  }
+  
+  .item-33 {
+    height: 3rem;
+    animation-duration: 3.3s;
+  }
+  
+  @keyframes background {
+    0% {
+      background-image: var(--image-1);
+    }
+    30% {
+      background-image: var(--image-1);
+    }
+    33% {
+      background-image: var(--image-2);
+    }
+    63% {
+      background-image: var(--image-2);
+    }
+    66% {
+      background-image: var(--image-3);
+    }
+    96% {
+      background-image: var(--image-3);
+    }
+    100% {
+      background-image: var(--image-1);
+    }
+  }
+  
+
+  
+  @keyframes background {
+    0% {
+      background-image: var(--image-4);
+    }
+    30% {
+      background-image: var(--image-4);
+    }
+    33% {
+      background-image: var(--image-5);
+    }
+    63% {
+      background-image: var(--image-5);
+    }
+    66% {
+      background-image: var(--image-6);
+    }
+    96% {
+      background-image: var(--image-6);
+    }
+    100% {
+      background-image: var(--image-4);
+    }
+  }
